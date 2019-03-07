@@ -1,13 +1,9 @@
 package io.akudrin.spring.data;
 
+import org.springframework.data.repository.CrudRepository;
+
 import io.akudrin.spring.Ingredient;
 
-public interface IngredientRepository {
-	
-	Iterable<Ingredient> findAll();
-	  
-	Ingredient findById(String id);
-	  
-	Ingredient save(Ingredient ingredient);
+public interface IngredientRepository extends CrudRepository<Ingredient, String> {
 
 }
